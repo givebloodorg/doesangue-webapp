@@ -25,7 +25,7 @@ export default {
       axios.post('https://doesangueapi.herokuapp.com/v1/auth/login',
         { email: this.email, password: this.password })
       .then(response => {
-        Vue.localStorage.set('token', JSON.stringify(response.data))
+        Vue.localStorage.set('token', JSON.stringify(response.data.access_token))
       })
       .catch(e => {
         console.log(e)
