@@ -1,0 +1,28 @@
+language: node_js
+node_js:
+  - "node"
+
+# Test if app works as expected
+#script:
+#  - npm run test
+
+cache:
+  directories:
+    - node_modules
+
+sudo: false
+dist: trusty
+
+# Noticate via slack
+notifications:
+  slack: projetodoesangue:n3fh7tZf7ZtGAiqzQPlIypiI
+
+before_deploy:
+  - npm run build
+deploy:
+  provider: surge
+  project: ./dist/
+  domain: beta.doesangue.me
+# The branch we will use to deploy
+  on: develop
+  skip_cleanup: true
