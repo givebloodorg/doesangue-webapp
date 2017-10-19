@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/home/Home'
 import Login from '@/components/auth/Login'
-import Registration from '@/components/auth/Registration'
+import Registration from '@/components/auth/Register'
 import Campaign from '@/components/home/Campaign'
 import CampaignDetail from '@/components/home/CampaignDetail'
 
@@ -25,14 +25,14 @@ export default new Router({
       component: CampaignDetail
     },
     {
-      path: '/login',
-      name: 'login',
+      path: '/auth/signin',
+      name: 'signin',
       component: Login
     },
     {
-      path: '/registration',
-      name: 'Registration',
-      component: Registration
+      path: '/auth/signup',
+      name: 'signup',
+      component: Register
     }
   ]
 })
