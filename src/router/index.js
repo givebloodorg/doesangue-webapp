@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/home/Home'
 import Login from '@/components/auth/Login'
-import Registration from '@/components/auth/Register'
+import Register from '@/components/auth/Register'
 import Campaign from '@/components/home/Campaign'
 import CampaignDetail from '@/components/home/CampaignDetail'
 
