@@ -1,37 +1,46 @@
 <template>
-  <form @submit.prevent="login" :class="{ error: failed }">
-    <input v-model="email" type="email" placeholder="Email Address" autofocus required>
-    <input v-model="password" type="password" placeholder="Password" required>
-    <button type="submit">Log In</button>
-  </form>
+  <div>
+    <form @submit.prevent="login(user)" :class="{ error: errors.lenght > 0 }">
+      <input v-model="user.email" type="email" placeholder="Email Address" autofocus required>
+      <input v-model="user.password" type="password" placeholder="Password" required>
+      <button type="submit">Log In</button>
+    </form>
+    <br />
+    <ul>
+      <span v-if="errors.lenght > 0">
+        Error:
+      </span>
+      <br />
+      <span v-for="(fields, index) in errors" :key="index">
+        <li v-for="error in fields" :key="error">
+          {{error}}
+        </li>
+      </span>
+    </ul>
+  </div>
 </template>
 
 <script>
-import axios from 'axios'
-import Vue from 'vue'
-import VueLocalStorage from 'vue-localstorage'
-Vue.use(VueLocalStorage)
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   data () {
     return {
-      email: '',
-      password: '',
-      failed: false
+      user: {
+        email: 'test@user.com',
+        password: '12345678'
+      }
     }
   },
+  computed: {
+    ...mapGetters({
+      errors: 'errors'
+    })
+  },
   methods: {
-    login () {
-      axios.post('https://doesangueapi.herokuapp.com/v1/auth/login',
-        { email: this.email, password: this.password })
-      .then(response => {
-        Vue.localStorage.set('token', JSON.stringify(response.data.access_token))
-      })
-      .catch(e => {
-        console.log(e)
-        alert(e)
-      })
-    }
+    ...mapActions({
+      login: 'login'
+    })
   }
 }
 </script>
