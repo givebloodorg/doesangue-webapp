@@ -31,12 +31,12 @@ export default {
   data () {
     return {
       user: {
-        email: 'test@user.com',
-        first_name: 'test',
-        last_name: 'user',
-        username: 'testuser',
-        birthdate: '1987-12-31',
-        password: '12345678'
+        email: '',
+        first_name: '',
+        last_name: '',
+        username: '',
+        birthdate: '',
+        password: ''
       }
     }
   },
