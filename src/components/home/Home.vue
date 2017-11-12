@@ -23,8 +23,7 @@
         }
       },
       created () {
-      //  axios.get('https://doesangueapi.herokuapp.com/v1/campaigns')
-        axios.get('http://localhost:8000/v1/campaigns')
+        axios.get('https://doesangueapi.herokuapp.com/v1/campaigns')
         .then(response => {
           this.campaigns = response.data
         })
