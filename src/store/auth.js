@@ -67,24 +67,24 @@ export const actions = {
   },
   login ({ commit }, user) {
     axios.post('https://doesangueapi.herokuapp.com/v1/auth/login', user)
-    .then(response => {
-      commit(TYPES.REGISTER_SUCCESS, response.data.access_token)
-      window.localStorage.setItem(
-        'token',
-        JSON.stringify(response.data.access_token)
-      )
-      router.push('/campaigns')
-    })
-    .catch(error => {
-      if (error.response && error.response.data.error) {
-        commit(TYPES.REGISTER_FAIL, [{error: error.response.data.error}])
-      } else if (error.response && error.response.data) {
-        commit(TYPES.REGISTER_FAIL, error.response.data)
-      } else if (error.request) {
-        commit(TYPES.REGISTER_FAIL, error.request)
-      } else {
-        commit(TYPES.REGISTER_FAIL, error.message)
-      }
-    })
+      .then(response => {
+        commit(TYPES.LOGIN_SUCCESS, response.data.access_token)
+        window.localStorage.setItem(
+          'token',
+          JSON.stringify(response.data.access_token)
+        )
+        router.push('/campaigns')
+      })
+      .catch(error => {
+        if (error.response && error.response.data.error) {
+          commit(TYPES.LOGIN_FAIL, [{ error: error.response.data.error }])
+        } else if (error.response && error.response.data) {
+          commit(TYPES.LOGIN_FAIL, error.response.data)
+        } else if (error.request) {
+          commit(TYPES.LOGIN_FAIL, error.request)
+        } else {
+          commit(TYPES.LOGIN_FAIL, error.message)
+        }
+      })
   }
 }
