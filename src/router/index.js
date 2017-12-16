@@ -1,38 +1,24 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/home/Home'
-import Login from '@/components/auth/Login'
-import Register from '@/components/auth/Register'
-import Campaign from '@/components/home/Campaign'
-import CampaignDetail from '@/components/home/CampaignDetail'
+import dashboardRoutes from './dashboard'
+import homeRoute from './home'
+import campaignRoute from './home/campaigns'
+import campaignDetail from './home/campaigns/details'
+import loginRoute from './auth/login'
+import registerRoute from './auth/register'
+import authDefault from './auth'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/campaigns',
-      name: 'campaigns',
-      component: Campaign
-    },
-    {
-      path: '/campaigns/:id',
-      component: CampaignDetail
-    },
-    {
-      path: '/auth/signin',
-      name: 'signin',
-      component: Login
-    },
-    {
-      path: '/auth/signup',
-      name: 'signup',
-      component: Register
-    }
+    dashboardRoutes,
+    homeRoute,
+    campaignRoute,
+    campaignDetail,
+    authDefault,
+    loginRoute,
+    registerRoute
   ]
 })
