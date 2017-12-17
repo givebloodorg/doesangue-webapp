@@ -1,7 +1,7 @@
-import Account from '@/components/dashboard/settings/Account'
+import Dashboard from '@/components/dashboard/Dashboard'
 
 export default {
-  path: '/dashboard/account',
-  name: 'Account',
-  component: Account
+  path: '/dashboard',
+  name: 'Dashboard',
+  component: Dashboard
 }

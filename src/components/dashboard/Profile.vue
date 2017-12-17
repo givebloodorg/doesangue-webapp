@@ -1,4 +1,7 @@
 <template>
+  <div class="contaner">
+      <h1>Profile</h1>
+  </div>
 </template>
 
 <script>
