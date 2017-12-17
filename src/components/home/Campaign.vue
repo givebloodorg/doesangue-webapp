@@ -1,10 +1,36 @@
-  <template>
-    <div class="col-sm-6 col-sm-offset-3">
-      <h1>Campaigns</h1>
+<template>
+ <div class="container">
+  <h1>Featured Campaigns</h1>
+  <div class="card">
+   <div v-for="campaign in campaigns.data">
+     <img class="card-image-top" :src="campaign.image" :alt="campaign.title">
+     <div class="card-body">
+        <h4 class="card-title">{{campaign.title}}</h4>
+        <p class="card-text">{{campaign.description}}</p>
+        <p><i class="fa fa-calendar"></i>{{campaign.expires}}</p>
     </div>
-  </template>
+   </div>
+  </div>
+ </div>
+</template>
 
   <script>
-  export default {
-  }
+  import axios from 'axios'
+
+export default {
+    data () {
+      return {
+        campaigns: []
+      }
+    },
+    created () {
+      axios.get('https://doesangueapi.herokuapp.com/v1/campaigns')
+      .then(response => {
+        this.campaigns = response.data
+      })
+      .catch(e => {
+        this.campaigns.push(e)
+      })
+    }
+}
   </script>

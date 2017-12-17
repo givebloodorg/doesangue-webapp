@@ -3,8 +3,9 @@ node_js:
   - "node"
 
 # Test if app works as expected
-#script:
-#  - npm run test
+script:
+ - npm test
+# - npm run unit
 
 cache:
   directories:
@@ -22,7 +23,7 @@ before_deploy:
 deploy:
   provider: surge
   project: ./dist/
-  domain: beta.doesangue.me
+  domain: demo.doesangue.me
 # The branch we will use to deploy
-  on: develop
+  on: development
   skip_cleanup: true
