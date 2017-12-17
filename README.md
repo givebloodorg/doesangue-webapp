@@ -1,7 +1,8 @@
 # doesangue
 > online platform that connect donors and blood banks
 
-[![Build Status](https://travis-ci.org/doesangueorg/webapp.svg?branch=develop)](https://travis-ci.org/doesangueorg/webapp)
+[![Build Status](https://travis-ci.org/doesangueorg/doesangue-webapp.svg?branch=development)](https://travis-ci.org/doesangueorg/doesangue-webapp)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/88b2925e883b5a637ddf/test_coverage)](https://codeclimate.com/github/doesangueorg/doesangue-webapp/test_coverage)
 
 ## Build Setup
 

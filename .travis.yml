@@ -2,11 +2,6 @@ language: node_js
 node_js:
   - "node"
 
-# Test if app works as expected
-script:
- - npm test
-# - npm run unit
-
 cache:
   directories:
     - node_modules
@@ -17,6 +12,14 @@ dist: trusty
 # Noticate via slack
 notifications:
   slack: projetodoesangue:n3fh7tZf7ZtGAiqzQPlIypiI
+
+install: npm install -g codecov
+
+# Test if app works as expected
+script:
+ - npm test
+# - npm run unit
+ - codecov
 
 before_deploy:
   - npm run build
