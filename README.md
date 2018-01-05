@@ -3,6 +3,7 @@
 
 [![Build Status](https://travis-ci.org/doesangueorg/doesangue-webapp.svg?branch=development)](https://travis-ci.org/doesangueorg/doesangue-webapp)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/88b2925e883b5a637ddf/test_coverage)](https://codeclimate.com/github/doesangueorg/doesangue-webapp/test_coverage)
+<a href="https://www.buymeacoffee.com/kwTYQlq"><img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;"  target="_blank"></a>
 
 ## Build Setup
 
