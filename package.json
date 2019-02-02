@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.0",
     "npm": "^4.6.1",
     "vue": "^2.5.17",
     "vue-localstorage": "^0.6.2",
