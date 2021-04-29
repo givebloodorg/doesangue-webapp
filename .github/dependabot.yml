@@ -1,0 +1,51 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "08:00"
+    timezone: Africa/Luanda
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: npm
+    versions:
+    - 6.13.4
+    - 7.10.0
+    - 7.11.0
+    - 7.7.6
+    - 7.8.0
+    - 7.9.0
+  - dependency-name: chromedriver
+    versions:
+    - 88.0.0
+    - 89.0.0
+  - dependency-name: npm-registry-fetch
+    versions:
+    - 4.0.7
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
+    - 4.17.21
+  - dependency-name: nightwatch
+    versions:
+    - 1.5.1
+    - 1.6.0
+  - dependency-name: ora
+    versions:
+    - 5.3.0
+  - dependency-name: semver
+    versions:
+    - 7.3.4
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
+  - dependency-name: handlebars
+    versions:
+    - 4.7.6
+  - dependency-name: vue-template-compiler
+    versions:
+    - 2.6.11
+  - dependency-name: vue
+    versions:
+    - 2.6.11
