@@ -32,7 +32,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.22.0",
     "babel-register": "^6.22.0",
-    "chai": "^3.5.0",
+    "chai": "^4.3.5",
     "chalk": "^3.0.0",
     "chromedriver": "^78.0.1",
     "connect-history-api-fallback": "^1.6.0",
